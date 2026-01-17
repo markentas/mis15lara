@@ -3,38 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Canva Fullscreen</title>
 
   <style>
     html, body {
-      width: 100%;
-      height: 100%;
       margin: 0;
       padding: 0;
+      width: 100%;
+      height: 100%;
       overflow: hidden;
       background: #000;
     }
 
-    .canva-container {
+    /* Contenedor visible (pantalla completa) */
+    .viewport {
       position: fixed;
       inset: 0;
-      width: 100vw;
-      height: 100vh;
       overflow: hidden;
     }
 
-    .canva-container iframe {
-      width: 100%;
-      height: 100%;
+    /* Iframe escalado */
+    .viewport iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100vw;
+      height: 100vh;
+
+      /* AJUSTA ESTE VALOR PARA EL ZOOM */
+      transform: translate(-50%, -50%) scale(1.5);
+
+      transform-origin: center center;
       border: none;
     }
   </style>
 </head>
 <body>
 
-  <div class="canva-container">
+  <div class="viewport">
     <iframe
-      loading="lazy"
       src="https://www.canva.com/design/DAG-ZlUO7dM/XmnYGADQOONwW8zzFYjXPg/view?embed"
       allowfullscreen
       allow="fullscreen">
