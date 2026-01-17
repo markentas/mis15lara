@@ -1,53 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis XV Lara</title>
 
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* ---------- SECCIONES ---------- */
+    section {
+      min-height: 100vh;
       width: 100%;
-      height: 100%;
-      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+    }
+
+    /* ---------- PORTADA ---------- */
+    #cover {
+      background: radial-gradient(circle at top, #111, #000);
+    }
+
+    #cover h1 {
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      font-weight: 300;
+      margin-bottom: 16px;
+    }
+
+    #cover p {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      max-width: 300px;
+      margin-bottom: 32px;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      background: #fff;
+      color: #000;
+      border: none;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #ddd;
+    }
+
+    /* ---------- TARJETA ---------- */
+    #card {
+      display: none;
       background: #000;
     }
 
-    .viewport {
-      position: fixed;
-      inset: 0;
-      width: 100vw;
-      height: 100dvh;   /* FIX iOS */
-      height: 100svh;   /* fallback */
-      overflow: hidden;
+    .hero {
+      width: 100%;
+      max-width: 420px;
+      margin-bottom: 32px;
     }
 
-    .viewport iframe {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
+    }
 
-      width: 100vw;
-      height: 100dvh;
-      height: 100svh;
+    .title {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
 
-      transform: translate(-50%, -50%) scale(1.6);
-      transform-origin: center center;
+    .countdown {
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      opacity: 0.8;
+      margin-bottom: 32px;
+    }
 
-      border: none;
+    .block {
+      margin-bottom: 36px;
+    }
+
+    .block h3 {
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .block p {
+      font-size: 0.85rem;
+      opacity: 0.7;
+      line-height: 1.4;
+    }
+
+    footer {
+      font-size: 0.7rem;
+      opacity: 0.4;
+      margin-top: 24px;
     }
   </style>
 </head>
+
 <body>
 
-  <div class="viewport">
-    <iframe
-      src="https://www.canva.com/design/DAG-ZlUO7dM/XmnYGADQOONwW8zzFYjXPg/view?embed"
-      allow="fullscreen"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <!-- PORTADA -->
+  <section id="cover">
+    <h1>MIS XV LARA</h1>
+    <p>Quiero que seas parte de este momento tan importante para mí</p>
+    <button class="btn" onclick="enterCard()">INGRESAR</button>
+  </section>
+
+  <!-- TARJETA -->
+  <section id="card">
+
+    <div class="hero">
+      <!-- Reemplazá esta imagen por la tuya -->
+      <img src="https://images.unsplash.com/photo-1516455207990-7a41ce80f7ee?q=80&w=800" alt="Mis XV">
+    </div>
+
+    <div class="title">MIS XV · LARA</div>
+    <div class="countdown">72 : 06 : 27 : 42</div>
+
+    <div class="block">
+      <h3>CUÁNDO</h3>
+      <p>06 de Julio · 21:00 hs</p>
+    </div>
+
+    <div class="block">
+      <h3>DÓNDE</h3>
+      <p>Salón Crystal<br>Av. Principal 123</p>
+    </div>
+
+    <div class="block">
+      <h3>DRESS CODE</h3>
+      <p>Elegante</p>
+    </div>
+
+    <div class="block">
+      <h3>CONFIRMACIÓN</h3>
+      <p>Confirmar asistencia<br>hasta el 20/06</p>
+    </div>
+
+    <footer>
+      Con amor 💫
+    </footer>
+
+  </section>
+
+  <script>
+    function enterCard() {
+      document.getElementById("cover").style.display = "none";
+      document.getElementById("card").style.display = "flex";
+      window.scrollTo(0, 0);
+    }
+  </script>
 
 </body>
 </html>
