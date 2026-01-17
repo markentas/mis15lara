@@ -14,15 +14,26 @@
       text-align: center;
     }
 
+    /* CONTENEDOR SOLO MÓVIL */
+    .solo-movil {
+      display: none;
+    }
+
+    /* Se muestra únicamente en móviles */
+    @media (max-width: 768px) {
+      .solo-movil {
+        display: block;
+      }
+    }
+
     .canva-responsive {
       position: relative;
       width: 100%;
-      max-width: 900px;
-      margin: 1.6em auto 0.9em;
       aspect-ratio: 16 / 9;
       box-shadow: 0 2px 8px rgba(63, 69, 81, 0.16);
       border-radius: 8px;
       overflow: hidden;
+      margin: 1.6em auto 0.9em;
       background: #fff;
     }
 
@@ -53,23 +64,28 @@
 
 <body>
 
-  <div class="canva-responsive">
-    <iframe 
-      loading="lazy"
-      src="https://www.canva.com/design/DAG-ZlUO7dM/XmnYGADQOONwW8zzFYjXPg/view?embed"
-      allowfullscreen
-    ></iframe>
-  </div>
+  <!-- CONTENIDO SOLO PARA MÓVIL -->
+  <div class="solo-movil">
 
-  <div class="creditos">
-    <a 
-      href="https://www.canva.com/design/DAG-ZlUO7dM/XmnYGADQOONwW8zzFYjXPg/view"
-      target="_blank"
-      rel="noopener"
-    >
-      MIS XV LARA
-    </a>
-    de Equipo Markentas
+    <div class="canva-responsive">
+      <iframe 
+        loading="lazy"
+        src="https://www.canva.com/design/DAG-ZlUO7dM/XmnYGADQOONwW8zzFYjXPg/view?embed"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <div class="creditos">
+      <a 
+        href="https://www.canva.com/design/DAG-ZlUO7dM/XmnYGADQOONwW8zzFYjXPg/view"
+        target="_blank"
+        rel="noopener"
+      >
+        MIS XV LARA
+      </a>
+      de Equipo Markentas
+    </div>
+
   </div>
 
 </body>
