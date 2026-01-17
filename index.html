@@ -14,25 +14,27 @@
       background: #000;
     }
 
-    /* Contenedor visible (pantalla completa) */
     .viewport {
       position: fixed;
       inset: 0;
+      width: 100vw;
+      height: 100dvh;   /* FIX iOS */
+      height: 100svh;   /* fallback */
       overflow: hidden;
     }
 
-    /* Iframe escalado */
     .viewport iframe {
       position: absolute;
       top: 50%;
       left: 50%;
+
       width: 100vw;
-      height: 100vh;
+      height: 100dvh;
+      height: 100svh;
 
-      /* AJUSTA ESTE VALOR PARA EL ZOOM */
-      transform: translate(-50%, -50%) scale(1.5);
-
+      transform: translate(-50%, -50%) scale(1.6);
       transform-origin: center center;
+
       border: none;
     }
   </style>
@@ -42,8 +44,8 @@
   <div class="viewport">
     <iframe
       src="https://www.canva.com/design/DAG-ZlUO7dM/XmnYGADQOONwW8zzFYjXPg/view?embed"
-      allowfullscreen
-      allow="fullscreen">
+      allow="fullscreen"
+      allowfullscreen>
     </iframe>
   </div>
 
