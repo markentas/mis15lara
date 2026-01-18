@@ -7,43 +7,21 @@
 
   
 <style>
-.controls {
-    display: flex;
-    gap: 10px;
-}
-button {
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: black; /* tu color */
-    color: white; /* texto visible */
-    border: none; /* quita borde por defecto */
-    -webkit-appearance: none; /* elimina estilo iOS */
-    -moz-appearance: none; /* elimina estilo Firefox */
-    appearance: none; /* elimina estilo moderno */
-    outline: none; /* quita outline al hacer focus */
-}
 
-button:active {
-    background-color: black; /* mantiene negro al tocar */
-}
-
-button::-moz-focus-inner {
-    border: 0; /* elimina borde interno Firefox */
-}
 </style>
 </head>
 <body>
-  <audio id="player" src="audio/We Found Love x I Gotta Feeling Mashup Full Version.mp3"></audio>
 
-<div class="controls">
-    <button id="playBtn">▶</button>
-    <button  id="pauseBtn">⏸</button>
-</div>
+<audio controls autoplay>
+  <source src="audio/We Found Love x I Gotta Feeling Mashup Full Version.mp3" type="audio/mp3">
+Your browser does not support the audio element.
+</audio>
+
 <script>
-const player = document.getElementById('player');
-document.getElementById('playBtn').onclick = () => player.play();
-document.getElementById('pauseBtn').onclick = () => player.pause();
+
 </script>
 </body>
 </html>
+
+
+
