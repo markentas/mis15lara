@@ -15,9 +15,21 @@ button {
     padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
+    background-color: black; /* tu color */
+    color: white; /* texto visible */
+    border: none; /* quita borde por defecto */
+    -webkit-appearance: none; /* elimina estilo iOS */
+    -moz-appearance: none; /* elimina estilo Firefox */
+    appearance: none; /* elimina estilo moderno */
+    outline: none; /* quita outline al hacer focus */
 }
-#pauseBtn {
-  background-color: black;
+
+button:active {
+    background-color: black; /* mantiene negro al tocar */
+}
+
+button::-moz-focus-inner {
+    border: 0; /* elimina borde interno Firefox */
 }
 </style>
 </head>
