@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mis XV años | LARA</title>
+  <!-- Font Awesome -->
+  <title>INVITACIÓN A MIS 15 AÑOS | LARA</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
     /* Reset básico */
@@ -322,6 +323,39 @@
 }
 
 
+/** reproductor 2*/
+  #circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #222; /* Estado A */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s, transform 0.3s;
+
+    /* Fijo abajo a la derecha */
+    position: fixed;
+    bottom: 20px; /* distancia desde abajo */
+    right: 20px;  /* distancia desde la derecha */
+    z-index: 1000; /* por si hay otros elementos encima */
+  }
+
+  /* Estado B */
+  .state-b {
+    background-color: blue;
+  }
+
+  /* Opcional: efecto al hacer clic */
+  #circle:active {
+    transform: scale(0.95);
+  }
+
+
 
   </style>
 </head>
@@ -410,7 +444,8 @@
   <button id="toggleMusic">⏸</button>
 </div>
 
-
+  <!-- Reproductor 2 -->
+<div id="circle">⏸</div>
 
   <!-- Script de cuenta regresiva -->
   <script>
@@ -462,12 +497,25 @@
 <script>
   const music = document.getElementById("bg-music");
   const btn = document.getElementById("toggleMusic");
+  const circle = document.getElementById('circle');
 
   // Para autoplay en algunos navegadores
-  document.addEventListener("click", () => {
+  document.addEventListener("click", () => { 
     if (music.paused) music.play();
   }, { once: true });
 
+  // Función para alternar A-B
+  function toggleCircle() {
+    if (circle.classList.contains('state-b')) {
+      circle.classList.remove('state-b');
+      circle.textContent = '⏸';
+    } else {
+      circle.classList.add('state-b');
+      circle.textContent = '▶';
+    }
+  }
+
+  // Click en el botón de música
   btn.addEventListener("click", () => {
     if (music.paused) {
       music.play();
@@ -476,14 +524,11 @@
       music.pause();
       btn.textContent = "▶";
     }
+
+    // Cambiamos A ↔ B al mismo tiempo
+    toggleCircle();
   });
 </script>
 
-
 </body>
 </html>
-
-
-
-
-
