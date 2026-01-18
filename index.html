@@ -282,28 +282,38 @@
     }
   }
 
-/* Botón redondo, grande y centrado */
-.music-player button {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.7);
-  background: rgba(13,13,13,0.6);
+/** Reproductor de música */
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(255,255,255,0.3);
-  padding: 0 0 5px;
-  -webkit-appearance: none; /* elimina estilo nativo iOS */
-  appearance: none;
-  outline: none;
 }
 
-.music-player .icon {
-  color: #fff; /* blanco garantizado */
-  font-size: 35px;
-  user-select: none; /* evita selección de texto al tocar */
+/* Botón redondo, grande y centrado */
+.music-player button {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 80px;               
+  height: 80px;              
+  border-radius: 50%;        
+  border: 2px solid rgba(255,255,255,0.7); 
+  background: rgba(13,13,13,0);  
+  color: #fff;
+  font-size: 35px;           
+  cursor: pointer;
+  display: flex;             
+  align-items: center;       
+  justify-content: center;   
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  padding: 0 0 5px;
+  -webkit-appearance: none; /* elimina estilo nativo en iOS */
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 0;
 }
 
 .music-player button:hover {
@@ -391,13 +401,13 @@
   </section>
 
   <!-- Reproductor -->
- <div class="music-player">
-  <audio id="bg-music" loop>
+  <div class="music-player">
+  <audio id="bg-music" autoplay loop>
     <source src="audio/We Found Love x I Gotta Feeling Mashup Full Version.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
   </audio>
-  <button id="toggleMusic">
-    <span class="icon">⏸</span>
-  </button>
+
+  <button id="toggleMusic">⏸</button>
 </div>
 
 
@@ -451,29 +461,28 @@
   <!-- Script para repoductor de música -->
 <script>
   const music = document.getElementById("bg-music");
-const btn = document.getElementById("toggleMusic");
-const icon = btn.querySelector(".icon");
+  const btn = document.getElementById("toggleMusic");
 
-// Primera interacción para móviles
-document.addEventListener("click", () => {
-  if (music.paused) music.play();
-}, { once: true });
+  // Para autoplay en algunos navegadores
+  document.addEventListener("click", () => {
+    if (music.paused) music.play();
+  }, { once: true });
 
-btn.addEventListener("click", () => {
-  if (music.paused) {
-    music.play();
-    icon.textContent = "⏸"; // pausa
-  } else {
-    music.pause();
-    icon.textContent = "▶"; // play
-  }
-});
-
+  btn.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+      btn.textContent = "⏸";
+    } else {
+      music.pause();
+      btn.textContent = "▶";
+    }
+  });
 </script>
 
 
 </body>
 </html>
+
 
 
 
