@@ -1,111 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Font Awesome -->
-  <title>.:: INVITACIÓN A MIS 15 AÑOS | LARA ::.</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INVITACIÓN A MIS 15 AÑOS | LARA</title>
 
-    html, body {
-      font-family: "Montserrat", Arial, sans-serif;
-      font-weight: 400;
-      scroll-behavior: smooth;
-    }
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-    /* Secciones generales */
-    section {
-      height: 100vh; /* pantalla completa */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: #fff;
-      text-align: center;
-    }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">
 
-    /* Colores diferentes por sección */
-    #section1 {
-      background-color: #0d0d0d; 
-    }
-    #section2 {
-      background-color: #000000;
-      background-image: url('img/background-bolas.jpg');
-      background-size: 100% auto;
-      background-repeat: no-repeat;
-      background-position: top center;
-    }
-    #section3 {
-      background-color: #0d0d0d;
-      height: 50vh; /* pantalla a la mitad */
-    }
-    #section4 {
-      background-color: #000000;
-         height: 50vh; /* pantalla a la mitad */
-    }
-    #section5 {
-      background-color: #0d0d0d;
-      height: 50vh; /* pantalla a la mitad */
-    }
-    #section6 {
-      background-color: #000000;
-      height: 50vh; /* pantalla a la mitad */
-    }
-    #section7 {
-      background-color: #0d0d0d;
-      height: 50vh; /* pantalla a la mitad */
-    }
-    #section8 {
-      background-color: #0d0d0d;
-      height: 50vh;
-      background-image: url('img/bola-disco.jpg');
-      background-size: cover;        /* 👈 ocupa todo el contenedor */
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-    #section9 {
-      background-color: #0d0d0d;
-      height: 50vh; /* pantalla a la mitad */
-    }
-    #section10 {
-      background-color: #000000;
-      height: 50vh; /* pantalla a la mitad */
-    }
-    #section11 {
-      background-color: #0d0d0d;
-      height: 50vh; /* pantalla a la mitad */
-    }
+<style>
+  /* Reset básico */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { font-family: "Montserrat", Arial, sans-serif; scroll-behavior: smooth; background: #000; color: #fff; }
 
-    /* Tamaño fuentes secciones */
-    #section1 h1 {
+  section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+  }
+
+  /* Secciones con fondo */
+  #section1 { background-color: #0d0d0d; }
+  #section2 { background-color: #000; background: url('img/background-bolas.jpg') top center/cover no-repeat; }
+  #section3, #section5, #section7, #section9, #section11 { background-color: #0d0d0d; height: 50vh; }
+  #section4, #section6, #section10 { background-color: #000; height: 50vh; }
+  #section8 { background: url('img/bola-disco.jpg') center/cover no-repeat; height: 50vh; }
+
+  /* Secciones: Textos y botones */
+  #section1 h1 {
       font-size: 2.5em;
       font-weight: 300;
-      margin: 10px;
+      margin: 5px;
     }
     #section1 p {
       font-size: 1.1em;
       font-weight: 200;
-      margin: 10px;
-    }
-    #section1 a {
-      color: #000;
-      font-size: 1.2em;
-      text-decoration: none;
-      background-color: #fff;
-      padding: 10px;
-      margin: 10px;
+      margin: 30px;
     }
 
     #section2 h1 {
       font-size: 5em;
-      font-weight: 400;
+      font-weight: 500;
       margin: 10px;
     }
     #section2 p {
@@ -127,7 +69,7 @@
     border-bottom: #fff solid 1px;
     padding: 30px 10px 30px 10px;
     font-size: 1.2em;
-    font-weight: 300;
+    font-weight: 400;
   }
 
   #section4 h1 {
@@ -136,7 +78,7 @@
     font-size: 1.5em;
   }
   #section4 p {
-    padding: 5px;
+    padding: 3px;
   }
 
   #section5 h1 {
@@ -145,22 +87,19 @@
     font-size: 1.5em;
   }
 
-    #section5 a {
-      font-weight: 400;
-      color: #fff;
-      text-decoration: none;
-      background-color: #0d0d0d;
-      padding: 10px;
-      margin: 20px;
-      outline: 0.5px solid #fff;
-    }    
+  #section5 p {
+    margin: 2px;
+  }
+  #section5 a {
+    margin-top: 30px;
+  }
+  
   #section6 h1 {
     padding: 20px;
     font-weight: 300;
     font-size: 1.5em;
   }
-
-    #section6 a {
+  #section6 span {
       display: inline-flex;
       align-items: center;      /* centra verticalmente imagen y texto */
       justify-content: center;  /* centra el contenido */
@@ -169,13 +108,14 @@
       margin: 20px;
       color: #fff;
     } 
+
   #section7 h1 {
     padding: 20px;
     font-weight: 300;
     font-size: 1.5em;
   }
   #section8 h1 {
-        border-top: #fff solid 1px;
+    border-top: #fff solid 1px;
     border-bottom: #fff solid 1px;
     padding: 30px 10px 30px 10px;
     font-size: 2em;
@@ -186,355 +126,297 @@
     font-weight: 300;
     font-size: 1.5em;
   }
-  #section9 p {
-    padding: 15px;
-  }
+
   #section9 span {
     width: 80px;        /* largo de la línea */
     height: 1px;        /* grosor */
     background-color: #fff;
+    margin: 10px;
   }
   #section10 h1 {
     padding: 20px 0 0 0;
     font-weight: 300;
     font-size: 1.5em;
   }
+  #section10 h2 {
+    font-weight: 200;
+    font-size: 1.1em;
+    margin: 5px 0 30px 0;
+  }
   #section10 p {
     padding: 5px;
   }
-  #section10 a {
-    font-weight: 400;
-    color: #fff;
-    text-decoration: none;
-    background-color: #0d0d0d;
-    padding: 10px;
-    margin: 20px;
-    outline: 0.5px solid #fff;
-  }
+
   #section11 h1 {
     padding: 20px 0 0 0;
     font-weight: 300;
     font-size: 1.5em;
   }   
 
-    /* Estilo del contador */
-    #countdown {
-      font-size: 2rem;
-      color: #fff;
-      margin-top: 20px;
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    #countdown span {
-      display: inline-block;
-      min-width: 60px;
-      background: rgba(0,0,0,0.3);
-      padding: 10px 30px;
-      border-radius: 8px;
-    }
-    #countdown_text span.dias{
-      font-size: 1em;
-      padding: 0 0 0 30px;
-    }
-    #countdown_text span.horas{
-      font-size: 1em;
-      padding: 0 20px 0 50px;
-    }
-    #countdown_text span.minutos{
-      font-size: 1em;
-      padding: 0 20px;
-    }
-    #countdown_text span.segundos{
-      font-size: 1em;
-      padding: 0;
-    }
+
+  /* Tipografía general */
+  h1 { text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+
+  /* Botones estilo cuadrado */
+a {
+  display: inline-block;       /* permite padding y tamaño como botón */
+  padding: 10px 20px;          /* espacio interno */
+  border: 2px solid #fff;      /* borde blanco */
+  color: #fff;                 /* texto blanco */
+  text-decoration: none;       /* quita subrayado */
+  font-weight: 500;             /* opcional: más visible */
+  border-radius: 4px;          /* ligeramente redondeado, cambiar a 0 para cuadrado perfecto */
+  transition: background 0.3s, color 0.3s; /* efecto suave */
+  cursor: pointer;
+}
+
+/* Hover opcional para interacción */
+a:hover {
+  background-color: #fff;      /* fondo blanco al pasar el mouse */
+  color: #000;                 /* texto negro al pasar el mouse */
+}
 
 
-    /* Efecto de sombra en texto */
-    section h1 {
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
 
-    /** ANIMACIONES PARA LOS OBJETOS DE LA WEB */
-    /* Estado inicial */
-  .reveal > * {
-    opacity: 0;
-    transform: translateY(30px);
-  }
+  /* Contador */
+  #countdown_text {
+  display: flex;
+  justify-content: space-between;  /* distribuye los bloques */
+  align-items: center;
+  width: 80%;
+  max-width: 600px;               /* limita ancho máximo */
+  margin: 20px auto 0 auto;       /* centrado horizontal */
+  padding: 0 10px;
+  gap: 15px;
+}
 
-  /* Animación */
-  .reveal.show > * {
-    animation: revealUp 0.7s ease forwards;
-  }
+.count-block {
+  display: flex;
+  flex-direction: column;        /* número arriba, texto abajo */
+  align-items: center;           /* centra horizontalmente */
+  flex: 1;                       /* bloques de igual tamaño */
+}
 
-  /* Delay automático según el orden */
+.count-block span {
+  display: block;
+}
+
+.count-block span:first-child {   /* números */
+  font-size: 1.7em;
+  font-weight: 500;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.count-block .label {            /* texto debajo */
+  font-size: 0.9em;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+
+  /* Animaciones reveal */
+  .reveal > * { opacity: 0; transform: translateY(30px); }
+  .reveal.show > * { animation: revealUp 0.7s ease forwards; }
   .reveal.show > *:nth-child(1) { animation-delay: 0.1s; }
   .reveal.show > *:nth-child(2) { animation-delay: 0.3s; }
   .reveal.show > *:nth-child(3) { animation-delay: 0.5s; }
   .reveal.show > *:nth-child(4) { animation-delay: 0.7s; }
   .reveal.show > *:nth-child(5) { animation-delay: 0.9s; }
 
-  @keyframes revealUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  @keyframes revealUp { to { opacity: 1; transform: translateY(0); } }
+
+  /* Reproductor flotante */
+  .music-player {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
   }
 
-/** Reproductor de música */
-.music-player {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  #audioPlayer { width: 250px; transform: scale(1.2); transform-origin: bottom right; }
 
-    #toggleMusic {
-      opacity: 0;
-    }
-
-/* Botón redondo, grande y centrado */
-.music-player button {
-  font-family: Arial, Helvetica, sans-serif;
-  width: 80px;               
-  height: 80px;              
-  border-radius: 50%;        
-  border: 2px solid rgba(255,255,255,0.7); 
-  background: rgba(13,13,13,0);  
-  color: #fff;
-  font-size: 35px;           
-  cursor: pointer;
-  display: flex;             
-  align-items: center;       
-  justify-content: center;   
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(255,255,255,0.3);
-  padding: 0 0 5px;
-  -webkit-appearance: none; /* elimina estilo nativo en iOS */
-  -moz-appearance: none;
-  appearance: none;
-  opacity: 0;
-}
-
-.music-player button:hover {
-  background: rgba(255,255,255,0.1);
-  transform: scale(1.1);
-}
-
-
-/** reproductor 2*/
-  #circle {
-    width: 100px;
-    height: 100px;
+  /* Botón circular Play/Pause */
+  #taggleAB {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    background-color: #222; /* Estado A */
+    background-color: #222;
+    color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-weight: bold;
     cursor: pointer;
     user-select: none;
-    transition: background-color 0.3s, transform 0.3s;
-
-    /* Fijo abajo a la derecha */
-    position: fixed;
-    bottom: 20px; /* distancia desde abajo */
-    right: 20px;  /* distancia desde la derecha */
-    z-index: 1000; /* por si hay otros elementos encima */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 999;
+    font-size: 28px;
+    outline: none;
+    -webkit-tap-highlight-color: transparent; /* elimina el efecto azul en móviles */
   }
-
-  /* Estado B */
-  .state-b {
-    background-color: blue;
-  }
-
-  /* Opcional: efecto al hacer clic */
-  #circle:active {
-    transform: scale(0.95);
-  }
-
-
-
-  </style>
+  #taggleAB:focus {
+  outline: none;      /* asegura que tampoco aparezca al tabular */
+}
+</style>
 </head>
 <body>
 
-  <!-- Secciones -->
-  <section id="section1" class="reveal">
-    <h1>MIS XV LARA</h1>
-    <p>QUIERO QUE SEAS PARTE DE ESTE MOMENTO TAN IMPORTANTE PARA MÍ</p>
-    <a href="#section2">INGRESAR</a>
-  </section>
+<!-- Secciones -->
+<section id="section1" class="reveal">
+  <h1>MIS XV LARA</h1>
+  <p>QUIERO QUE SEAS PARTE DE ESTE MOMENTO TAN IMPORTANTE PARA MÍ</p>
+  <a href="#section2">INGRESAR</a>
+</section>
 
-  <section id="section2" class="reveal">
-    <h1>MIS XV <br>LARA</h1>
-    <div id="countdown">
+<section id="section2" class="reveal">
+  <h1>MIS XV <br>LARA</h1>
+
+  <div id="countdown_text">
+    <div class="count-block">
       <span id="days">0</span>
+      <span class="label">DIAS</span>
+    </div>
+    <div class="count-block">
       <span id="hours">0</span>
+      <span class="label">HORAS</span>
+    </div>
+    <div class="count-block">
       <span id="minutes">0</span>
+      <span class="label">MINUTOS</span>
+    </div>
+    <div class="count-block">
       <span id="seconds">0</span>
+      <span class="label">SEGUNDOS</span>
     </div>
-    <div id="countdown_text">
-      <span class="dias">DIAS</span>
-      <span class="horas">HORAS</span>
-      <span class="minutos">MINUTOS</span>
-      <span class="segundos">SEGUNDOS</span>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section id="section3" class="reveal">
-    <h1>TU PRESENCIA EN ESTA NOCHE NUNCA <BR>LA OLVIDARÉ</BR></h1>
-  </section>
 
-  <section id="section4" class="reveal">
-    <img src="img/ffffff-blanco-icono-3-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
-    <h1>¿CUÁNDO?</h1>
-    <p>28 DE MARZO DE 2026</p>
-    <p>| 21:30 HS |</p>
-  </section>
+<section id="section3" class="reveal">
+  <h1>TU PRESENCIA EN ESTA NOCHE NUNCA <br>LA OLVIDARÉ</h1>
+</section>
 
-    <section id="section5" class="reveal">
-    <img src="img/ffffff-blanco-icono-25-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
-    <h1>¿DÓNDE?</h1>
-    <p>CARBEL</p>
-    <p>LAS HERAS 19 | BARRIO YPF</p>
-    <a href="https://maps.app.goo.gl/pPjpzxFBvqa4fpHAA" target="_blank">COMO LLEGAR</a>
-  </section>
-  <section id="section6" class="reveal">
-    <img src="img/ffffff-blanco-icono-12-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
-    <h1>REGALOS</h1>
-    <p>NADA ES MAS IMPORTANTE QUE TU</BR> PRESENCIA, PERO SI DESEAS HACERME</BR>UN PRESENTE PUEDES DEPOSITARLO EN </BR> LA SIGUIENTE CUENTA</p>
-    <a href="#"><img src="img/MP_RGB_HANDSHAKE_color_vertical.png" width="40">LARACAN.11</a>
-  </section>
-  <section id="section7" class="reveal">
-    <img src="img/ffffff-blanco-icono-6-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
-    <h1>QUIERO VER TUS FOTOS</h1>
-    <p>PUEDEN ETIQUETAR TODAS SUS </BR>PUBLICACIONES DE INSTAGRAM </BR>A @LARUUFERNANDEZ_</p>
-  </section>
-  <section id="section8" class="reveal">
-    <h1>HAGAMOS QUE ESTA SEA </BR>UNA NOCHE </BR><b>¡INOLVIDABLE!</b></h1>
-  </section>
-  <section id="section9" class="reveal">
-    <img src="img/ffffff-blanco-icono-20-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
-    <h1>DRESS CODE</h1>
-    <p>ELEGANTE SPORT</p>
-    <SPAN></SPAN>
-    <P>TOTAL BLACK</P>
-  </section>
-  <section id="section10" class="reveal">
-    <img src="img/ffffff-blanco-icono-8-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
-    <h1>CONFIRMAR ASISTENCIA</h1>
-    <p>HASTA ANTES DEL 20 DE MARZO</p>
-    <a href="https://api.whatsapp.com/send?phone=5493873306955&text=Confirmo%20mi%20asistencia%20a%20tus%20XV,%20ah%C3%AD%20estar%C3%A9%20%E2%99%A5" target="_blank">CONFIRMAR</a>
-  </section>
-  <section id="section11" class="reveal">
-    <img src="img/ffffff-blanco-icono-34-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
-    <h1>TE ESPERO</h1>
-  </section>
+<section id="section4" class="reveal">
+  <img src="img/ffffff-blanco-icono-3-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
+  <h1>¿CUÁNDO?</h1>
+  <p>28 DE MARZO DE 2026
+  <p>| 21:30 HS |</p>
+</section>
 
-  <!-- Reproductor -->
-  <div class="music-player">
-  <audio style="opacity:0" id="bg-music" autoplay loop>
+<section id="section5" class="reveal">
+  <img src="img/ffffff-blanco-icono-25-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
+  <h1>¿DÓNDE?</h1>
+  <p><b>CARBEL</b></p>
+  <p>LAS HERAS 19 | BARRIO YPF</p>
+  <a href="https://maps.app.goo.gl/pPjpzxFBvqa4fpHAA" target="_blank">COMO LLEGAR</a>
+</section>
+
+<section id="section6" class="reveal">
+  <img src="img/ffffff-blanco-icono-12-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
+  <h1>REGALOS</h1>
+  <p>NADA ES MÁS IMPORTANTE QUE TU <br>PRESENCIA, PERO SI DESEAS HACERME <br>UN PRESENTE PUEDES DEPOSITARLO EN <br>LA SIGUIENTE CUENTA</p>
+  <span><img src="img/MP_RGB_HANDSHAKE_color_vertical.png" width="40">LARACAN.11</span>
+</section>
+
+<section id="section7" class="reveal">
+  <img src="img/ffffff-blanco-icono-6-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
+  <h1>QUIERO VER TUS FOTOS</h1>
+  <p>PUEDEN ETIQUETAR TODAS SUS <br>PUBLICACIONES DE INSTAGRAM <br>A @LARUUFERNANDEZ_</p>
+</section>
+
+<section id="section8" class="reveal">
+  <h1>HAGAMOS QUE ESTA SEA <br>UNA NOCHE <br><b>¡INOLVIDABLE!</b></h1>
+</section>
+
+<section id="section9" class="reveal">
+  <img src="img/ffffff-blanco-icono-20-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
+  <h1>DRESS CODE</h1>
+  <p>ELEGANTE SPORT</p>
+  <SPAN></SPAN>
+  <P>TOTAL BLACK</P>
+</section>
+
+<section id="section10" class="reveal">
+  <img src="img/ffffff-blanco-icono-8-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
+  <h1>CONFIRMAR ASISTENCIA</h1>
+  <h2>HASTA ANTES DEL 20 DE MARZO</h2>
+  <a href="https://api.whatsapp.com/send?phone=5493873306955&text=Confirmo%20mi%20asistencia%20a%20tus%20XV,%20ah%C3%AD%20estar%C3%A9%20%E2%99%A5" target="_blank">CONFIRMAR</a>
+</section>
+
+<section id="section11" class="reveal">
+  <img src="img/ffffff-blanco-icono-34-ezgif.com-webp-to-gif-converter.gif" width="60" height="60">
+  <h1>TE ESPERO</h1>
+</section>
+
+<!-- Reproductor de música -->
+<div class="music-player">
+  <audio id="audioPlayer" loop>
     <source src="audio/We Found Love x I Gotta Feeling Mashup Full Version.mp3" type="audio/mpeg">
     Tu navegador no soporta audio.
   </audio>
-
-  <button id="toggleMusic">⏸</button>
 </div>
 
-  <!-- Reproductor 2 -->
-<div id="circle">⏸</div>
+<!-- Botón flotante Play/Pause -->
+<div id="taggleAB"><i class="fas fa-play"></i></div>
 
-  <!-- Script de cuenta regresiva -->
-  <script>
-    const targetDate = new Date("March 28, 2026 00:00:00").getTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance < 0) {
-        document.getElementById("countdown").innerHTML = "¡Llegó el momento!";
-        clearInterval(interval);
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("days").textContent = days;
-      document.getElementById("hours").textContent = hours;
-      document.getElementById("minutes").textContent = minutes;
-      document.getElementById("seconds").textContent = seconds;
-    }
-
-    const interval = setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
-
-    <!-- Animación de objetos de la web -->
 <script>
-  const sections = document.querySelectorAll('.reveal');
+  // Contador regresivo
+  const targetDate = new Date("March 28, 2026 00:00:00").getTime();
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  }, {
-    threshold: 0.2
-  });
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
 
-  sections.forEach(section => observer.observe(section));
-</script>
-
-  <!-- Script para repoductor de música -->
-<script>
-  const music = document.getElementById("bg-music");
-  const btn = document.getElementById("toggleMusic");
-  const circle = document.getElementById('circle');
-
-  // Para autoplay en algunos navegadores
-  document.addEventListener("click", () => { 
-    if (music.paused) music.play();
-  }, { once: true });
-
-  // Función para alternar A-B
-  function toggleCircle() {
-    if (circle.classList.contains('state-b')) {
-      circle.classList.remove('state-b');
-      circle.textContent = '⏸';
-    } else {
-      circle.classList.add('state-b');
-      circle.textContent = '▶';
-    }
+  if (distance < 0) {
+    document.getElementById("countdown_text").innerHTML = "¡Llegó el momento!";
+    clearInterval(interval);
+    return;
   }
 
-  // Click en el botón de música
-  btn.addEventListener("click", () => {
-    if (music.paused) {
-      music.play();
-      btn.textContent = "⏸";
-    } else {
-      music.pause();
-      btn.textContent = "▶";
-    }
+  document.getElementById("days").textContent = Math.floor(distance / (1000*60*60*24));
+  document.getElementById("hours").textContent = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+  document.getElementById("minutes").textContent = Math.floor((distance % (1000*60*60)) / (1000*60));
+  document.getElementById("seconds").textContent = Math.floor((distance % (1000*60)) / 1000);
+}
 
-    // Cambiamos A ↔ B al mismo tiempo
-    toggleCircle();
+const interval = setInterval(updateCountdown, 1000);
+updateCountdown();
+
+
+  // Animaciones reveal
+  const sections = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.2 });
+  sections.forEach(section => observer.observe(section));
+
+  // Reproductor música con botón flotante Play/Pause
+  const audio = document.getElementById('audioPlayer');
+  const toggleAB = document.getElementById('taggleAB');
+
+  toggleAB.addEventListener('click', () => {
+    if(audio.paused) audio.play();
+    else audio.pause();
   });
+
+  audio.addEventListener('play', () => toggleAB.innerHTML = '<i class="fas fa-pause"></i>');
+  audio.addEventListener('pause', () => toggleAB.innerHTML = '<i class="fas fa-play"></i>');
+
+  // Autoplay tras primer click en la página (opcional)
+  document.addEventListener("click", () => { if(audio.paused) audio.play(); }, { once: true });
 </script>
 
 </body>
 </html>
-
-
