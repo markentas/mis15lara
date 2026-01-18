@@ -10,17 +10,33 @@
     display: flex;
     gap: 10px;
 }
-button {
-    -webkit-tap-highlight-color: transparent; /* iOS y Android */
-    outline: none;                             /* elimina el borde de enfoque */
-    background: none;                          /* opcional, si quieres fondo transparente */
-    border: none;                              /* opcional, quitar borde */
+
+
+    button {
     padding: 5px 10px;
     font-size: 16px;
     cursor: pointer;
+
+    background-color: #fff; /* tu color normal */
+    border: none;
+    outline: none;
+
+    -webkit-tap-highlight-color: transparent; /* iOS y Android */
+    -webkit-user-select: none; /* evita selección accidental */
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
+/* Quita el efecto de fondo al tocar */
+button:active {
+    background-color: #fff; /* mismo color que el normal */
+}
+
+
+    
 </style>
-texto nuevo
+texto nuevo2
 <script>
 const player = document.getElementById('player');
 document.getElementById('playBtn').onclick = () => player.play();
