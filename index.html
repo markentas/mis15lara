@@ -283,35 +283,27 @@
   }
 
   /** Reproductor de música */
-  .music-player {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
+  .music-player button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.7);
+  background: rgba(13,13,13,0.6);
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  padding: 0 0 5px 0;
+  -webkit-appearance: none; /* elimina estilo nativo iOS */
+  appearance: none;
+  outline: none;
 }
 
-.music-player button {
-  font-family: Arial, Helvetica, sans-serif;
-  width: 80px;               /* más grande */
-  height: 80px;              /* más grande */
-  border-radius: 50%;        /* completamente redondeado */
-  border: 2px solid rgba(255,255,255,0.7); /* borde elegante */
-  background: rgba(13,13,13,0.6);  /* fondo semi-transparente */
-  color: #fff;
-  font-size: 35px;           /* ícono más grande */
-  cursor: pointer;
-  display: flex;             /* centra contenido */
-  align-items: center;       /* vertical */
-  justify-content: center;   /* horizontal */
-  transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(255,255,255,0.3);
-  padding: 0 0 5px 3px;
-  -webkit-appearance: none; /* elimina estilo nativo en iOS */
-  -moz-appearance: none;
-  appearance: none;
+.music-player .icon {
+  color: #fff; /* blanco garantizado */
+  font-size: 35px;
+  user-select: none; /* evita selección de texto al tocar */
 }
 
 .music-player button:hover {
@@ -320,13 +312,14 @@
 }
 
 
+
   </style>
 </head>
 <body>
 
   <!-- Secciones -->
   <section id="section1" class="reveal">
-    <h1>MIS XV LARAS</h1>
+    <h1>MIS XV LARA</h1>
     <p>QUIERO QUE SEAS PARTE DE ESTE MOMENTO TAN IMPORTANTE PARA MÍ</p>
     <a href="#section2">INGRESAR</a>
   </section>
@@ -398,13 +391,13 @@
   </section>
 
   <!-- Reproductor -->
-  <div class="music-player">
-  <audio id="bg-music" autoplay loop>
+ <div class="music-player">
+  <audio id="bg-music" loop>
     <source src="audio/We Found Love x I Gotta Feeling Mashup Full Version.mp3" type="audio/mpeg">
-    Tu navegador no soporta audio.
   </audio>
-
-  <button id="toggleMusic">⏸</button>
+  <button id="toggleMusic">
+    <span class="icon">⏸</span>
+  </button>
 </div>
 
 
@@ -458,26 +451,29 @@
   <!-- Script para repoductor de música -->
 <script>
   const music = document.getElementById("bg-music");
-  const btn = document.getElementById("toggleMusic");
+const btn = document.getElementById("toggleMusic");
+const icon = btn.querySelector(".icon");
 
-  // Para autoplay en algunos navegadores
-  document.addEventListener("click", () => {
-    if (music.paused) music.play();
-  }, { once: true });
+// Primera interacción para móviles
+document.addEventListener("click", () => {
+  if (music.paused) music.play();
+}, { once: true });
 
-  btn.addEventListener("click", () => {
-    if (music.paused) {
-      music.play();
-      btn.textContent = "⏸";
-    } else {
-      music.pause();
-      btn.textContent = "▶";
-    }
-  });
+btn.addEventListener("click", () => {
+  if (music.paused) {
+    music.play();
+    icon.textContent = "⏸"; // pausa
+  } else {
+    music.pause();
+    icon.textContent = "▶"; // play
+  }
+});
+
 </script>
 
 
 </body>
 </html>
+
 
 
