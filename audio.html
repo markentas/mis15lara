@@ -1,0 +1,24 @@
+<audio id="player" src="audio.mp3"></audio>
+
+<div class="controls">
+    <button id="playBtn">▶</button>
+    <button id="pauseBtn">⏸</button>
+</div>
+
+<style>
+.controls {
+    display: flex;
+    gap: 10px;
+}
+button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+
+<script>
+const player = document.getElementById('player');
+document.getElementById('playBtn').onclick = () => player.play();
+document.getElementById('pauseBtn').onclick = () => player.pause();
+</script>
