@@ -1,44 +1,32 @@
+
 <audio id="player" src="audio.mp3"></audio>
 
 <div class="controls">
-    <button id="playBtn">▶</button>
-    <button id="pauseBtn">⏸</button>
+  <div class="btn" id="playBtn">▶</div>
+  <div class="btn" id="pauseBtn">⏸</div>
 </div>
-
 <style>
 .controls {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
+.btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
 
-    button {
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
+  background: transparent;
+  border: none;
 
-    background-color: #fff; /* tu color normal */
-    border: none;
-    outline: none;
-
-    -webkit-tap-highlight-color: transparent; /* iOS y Android */
-    -webkit-user-select: none; /* evita selección accidental */
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* Quita el efecto de fondo al tocar */
-button:active {
-    background-color: #fff; /* mismo color que el normal */
-}
-
-
-    
-</style>
-texto nuevo2
+    </style>
 <script>
 const player = document.getElementById('player');
+
 document.getElementById('playBtn').onclick = () => player.play();
 document.getElementById('pauseBtn').onclick = () => player.pause();
 </script>
